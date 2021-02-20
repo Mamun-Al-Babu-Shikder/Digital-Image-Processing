@@ -33,6 +33,9 @@ public class GrayScaleConversion {
             }
         }
         displayImage("Output Image", image);
+
+        File outputFile = new File("resources/output/mbstu_logo.jpg");
+        ImageIO.write(image, "jpg", outputFile);
     }
 
     // Color conversion
