@@ -31,9 +31,8 @@ public class SubtractTwoImage {
             for (int j=0; j<height; j++){
                 Color c1 = new Color(img1.getRGB(i, j));
                 Color c2 = new Color(img2.getRGB(i, j));
-                int rgb1 = img1.getRGB(i, j);
-                int rgb2 = img2.getRGB(i, j);
-                outputImg.setRGB(i, j, new Color(Math.abs(c1.getRed()-c2.getRed()), Math.abs(c1.getGreen()-c2.getGreen()), Math.abs(c1.getBlue()-c2.getBlue())).getRGB());
+                outputImg.setRGB(i, j, new Color(Math.abs(c1.getRed()-c2.getRed()),
+                        Math.abs(c1.getGreen()-c2.getGreen()), Math.abs(c1.getBlue()-c2.getBlue())).getRGB());
             }
         }
         displayImage("Output Image", outputImg);
